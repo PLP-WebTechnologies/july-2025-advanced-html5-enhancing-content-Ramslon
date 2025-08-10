@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form and Content Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        img {
+            max-width: 50%;
+            border-radius: 4px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+        input, select, textarea {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #003060;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Page Example</h1>
+    <p>Showcasing Lists, Tables, Media, and a Complete HTML5 Form</p>
+</header>
+
+<main>
+    <!-- Lists Section -->
+    <section>
+        <h2>Popular Web Technologies</h2>
+        <h3>Frontend</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+        <h3>Backend</h3>
+        <ol>
+            <li>Node.js</li>
+            <li>Python (Django / Flask)</li>
+            <li>PHP (Laravel)</li>
+        </ol>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Web Development Skills Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Category</th>
+                    <th>Proficiency Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML5</td>
+                    <td>Frontend</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                    <td>Frontend</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Backend</td>
+                    <td>Advanced</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Media Example</h2>
+        <p>Below is an image of a coding workspace and an audio track for background focus:</p>
+        <img src="https://cdn.pixabay.com/photo/2024/12/29/13/38/hacker-9297975_1280.png" alt="Developer workspace image"  width="200" height="150">
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Contact & Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +254712345678" pattern="^\+?[0-9]{10,15}$" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required minlength="6">
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">--Select--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself" required></textarea>
+                
+                <label>
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </label>
+                
+                <label>
+                    <input type="radio" name="newsletter" value="yes"> Subscribe to newsletter
+                </label>
+                <label>
+                    <input type="radio" name="newsletter" value="no" checked> Do not subscribe
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced HTML5 Example. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
